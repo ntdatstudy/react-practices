@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title1": "Eat Healthy",
+    "title2": "Stay Healthy",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore et dolore magna aliqua. Ut enim and minim veniam, quis nostrud exercitation.",
+    "image": "1.png"
+  },
+  {
+    "id": 2,
+    "title1": "Eat Your",
+    "title2": "Veggies",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore et dolore magna aliqua. Ut enim and minim veniam, quis nostrud exercitation.",
+    "image": "2.png"
+  },
+  {
+    "id": 3,
+    "title1": "Good Food",
+    "title2": "Good Mood",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore et dolore magna aliqua. Ut enim and minim veniam, quis nostrud exercitation.",
+    "image": "3.png"
+  }
+]
