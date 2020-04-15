@@ -1,0 +1,108 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    .logo {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $defaultColor;
+        text-decoration: none;
+        font-size: 30px;
+        span {
+            color: $primaryColor;
+        }
+    }
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            margin: 0 20px;
+            &:nth-child(3),
+            &:nth-child(4) {
+                a {
+                    color: #FFF;    
+                }
+            }
+            a {
+                position: relative;
+                text-decoration: none;
+                font-size: 18px;
+                padding: 4px 10px;
+                color: $defaultColor;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: $primaryColor;
+                    z-index: -1;
+                    transition: 0.5s ease-in-out;
+                }
+                &:hover,
+                &.active {
+                    &::before {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 0;
+        ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: -100%;
+            background: #FFF;
+            padding: 100px 0;
+            z-index: 1000;
+            display: initial;
+            transition: 0.5s;
+            &.active {
+                left: 0;
+            }
+            li {
+                padding: 20px;
+                text-align: center;
+                a {
+                    color: $defaultColor !important;
+                    font-size: 36px;
+                    &:hover,
+                    &.active {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .toggle-nav {
+            $toggleNavSize: 34px;
+
+            width: $toggleNavSize;
+            height: $toggleNavSize;
+            border: none;
+            background: #FFF url('../images/menu.png');
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+            &.active {
+                position: fixed;
+                right: 50px;
+                z-index: 1000;
+                background: #FFF url('../images/cross.png');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

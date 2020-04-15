@@ -5,9 +5,9 @@ import GoodFoods from './projects/GoodFoods';
 
 function App() {
   return (
-    <div>
+    <>
       <GoodFoods />
-    </div>
+    </>
   );
 }
 
