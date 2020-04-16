@@ -2,15 +2,25 @@
   {
     "id": 1,
     "name": "GoodFoods",
+    "title": "GoodFoods",
     "bg_color": "#78FF00",
     "text_color": "#333",
     "href": "/goodfoods"
   },
   {
     "id": 2,
-    "name": "Loan Company",
+    "name": "LoanCompany",
+    "title": "Loan Company",
     "bg_color": "#3589F1",
     "text_color": "#000019",
     "href": "/loan-company"
+  },
+  {
+    "id": 3,
+    "name": "AccordianComponent",
+    "title": "Accordian Component",
+    "bg_color": "#009999",
+    "text_color": "#333333",
+    "href": "/accordian-component"
   }
 ]
