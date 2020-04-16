@@ -1,0 +1,24 @@
+.accordion-component-container {
+    .accordion-toggler {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: none;
+        background: #009999;
+        color: #333333;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid #000;
+    }
+    .accordion-content {
+        max-height: 0;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        .accordion-text {
+            padding: 5px 20px;
+        }
+    }
+}

@@ -11,9 +11,9 @@ function LoanCompany() {
     <AppProvider>
       <div className="loancompany-container">
         <Header />
-        <main>
+        {/* <main>
           <h1>Loan Company</h1>
-        </main>
+        </main> */}
       </div>
     </AppProvider>
   );

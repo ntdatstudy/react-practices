@@ -16,7 +16,7 @@ function Projects() {
           className="app-link"
           to={project.href}
         >
-          {project.name}
+          {project.title}
         </Link>
       ))}
     </div>
