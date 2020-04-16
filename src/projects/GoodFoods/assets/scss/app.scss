@@ -3,11 +3,8 @@
 $primaryColor: #78FF00;
 $defaultColor: #333;
 
-* {
+.goodfoods-container {
     font-family: 'Poppins', sans-serif;
-}
-
-.container {
     position: relative;
     padding: 0 100px;
     min-height: 100vh;
@@ -35,7 +32,7 @@ $defaultColor: #333;
 }
 
 @media (max-width: 992px) {
-    .container {
+    .goodfoods-container {
         padding: 20px 50px;
         &::before {
             display: none;

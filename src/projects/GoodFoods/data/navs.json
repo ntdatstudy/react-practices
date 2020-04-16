@@ -1,6 +1,6 @@
 [
-  { "title": "Home", "path": "/" },
-  { "title": "Menu", "path": "/menu" },
-  { "title": "About", "path": "/about" },
-  { "title": "Contact", "path": "/contact" }
+  { "title": "Home", "path": "/goodfoods" },
+  { "title": "Menu", "path": "/goodfoods/menu" },
+  { "title": "About", "path": "/goodfoods/about" },
+  { "title": "Contact", "path": "/goodfoods/contact" }
 ]
