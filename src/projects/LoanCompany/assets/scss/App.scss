@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primaryColor: #3589F1;
+$primaryHoverColor: #2171D3;
+
+.loancompany-container {
+    font-family: 'Rubik', sans-serif !important;
+    main {
+        padding-top: 103px;
+        background-image: url('../images/bg1.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.test-container {
+    height: 0;
+    width: 200px;
+    transform: translateY(100px);
+    transition: transform 1s;
+    &.active {
+        border: 1px solid #000;
+        transform: translateY(0);
+        padding: 20px;
+        height: auto;
+        a {
+            display: block;
+            padding: 10px 0;
+        }
+    }
+    a {
+        display: none;
+    }
+}
+
+@import 'Header';
+@import 'Section1';

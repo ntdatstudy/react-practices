@@ -11,7 +11,7 @@ Banner.propTypes = {
 function Banner(props) {
   const { banner, index } = props;
   const { bannerSelected } = useContext(HomeContext);
-  const className = index === bannerSelected ? 'banner active' : 'banner';
+  const className = index === bannerSelected ? 'goodfoods-banner active' : 'goodfoods-banner';
 
   return (
     <>
