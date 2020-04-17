@@ -13,7 +13,7 @@ function NavItem(props) {
   const [expanded, setExpanded] = useState(false);
   const [hover, setHover] = useState(false);
   const [subNavStyle, setSubNavStyle] = useState({});
-  const { navOpen, setSubNavsHeight, subNavsHeight } = useContext(AppContext);
+  const { setSubNavsHeight, subNavsHeight } = useContext(AppContext);
   const subNavContent = useRef(null);
   const navResponsive = useNavResponsive();
 
@@ -34,6 +34,7 @@ function NavItem(props) {
   useEffect(() => {
     if (!navResponsive) {
       setSubNavStyle({});
+      setExpanded(false);
     }
   }, [navResponsive]);
 

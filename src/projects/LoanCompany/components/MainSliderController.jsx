@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 
-import backIcon from '../assets/images/back.svg';
-import nextIcon from '../assets/images/next.svg';
-
 import { AppContext } from '../contexts/AppContext';
+import BackIcon from './Icons/BackIcon';
+import NextIcon from './Icons/NextIcon';
 
 function MainSliderController() {
   const { nextPromotion, prevPromotion } = useContext(AppContext);
@@ -11,10 +10,10 @@ function MainSliderController() {
   return (
     <div className="main-slider-controller">
       <button className="controller prev" onClick={prevPromotion}>
-        <img src={backIcon} alt="" />
+        <BackIcon />
       </button>
       <button className="controller next" onClick={nextPromotion}>
-        <img src={nextIcon} alt="" />
+        <NextIcon />
       </button>
     </div>
   );

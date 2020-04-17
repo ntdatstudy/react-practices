@@ -79,11 +79,11 @@
                         outline: none;
                     }
                     &:hover {
-                        img {
+                        .flaticon {
                             opacity: 0.3;
                         }
                     }
-                    img {
+                    .flaticon {
                         $iconSize: 20px;
                         width: $iconSize;
                         height: $iconSize;

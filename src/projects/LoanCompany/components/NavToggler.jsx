@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
-import menuIcon from '../assets/images/menu.svg';
 
 import { AppContext } from '../contexts/AppContext';
+import MenuIcon from './Icons/MenuIcon';
+
+import config from '../configs/app.json';
 
 function NavToggler() {
   const { toggleNavOpen } = useContext(AppContext);
 
   return (
     <button className="nav-toggler" onClick={toggleNavOpen}>
-      <img src={menuIcon} alt="menu" />
+      <MenuIcon color={config.app.primary_color} />
     </button>
   );
 }
