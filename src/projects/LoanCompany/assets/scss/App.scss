@@ -1,38 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
 
 $primaryColor: #3589F1;
 $primaryHoverColor: #2171D3;
 
 .loancompany-container {
     font-family: 'Rubik', sans-serif !important;
-    main {
-        padding-top: 103px;
-        background-image: url('../images/bg1.jpg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-    }
 }
 
-.test-container {
-    height: 0;
-    width: 200px;
-    transform: translateY(100px);
-    transition: transform 1s;
-    &.active {
-        border: 1px solid #000;
-        transform: translateY(0);
-        padding: 20px;
-        height: auto;
-        a {
+.loancompany-link {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    padding: 19px 31px;
+    background: $primaryColor;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+        &::before {
+            // transform: scaleX(1);
+            width: 100%;
+        }
+        &::after {
             display: block;
-            padding: 10px 0;
         }
     }
-    a {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $primaryHoverColor;
+        border-radius: 5px;
+        transition: width 0.5s;
+        transform-origin: left;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+        // transform: scaleX(0);
+        z-index: 1;
+    }
+    &::after {
+        position: absolute;
+        content: attr(data-text);
+        left: 0;
+        top: 0;
+        padding: 19px 31px;
+        z-index: 2;
         display: none;
     }
 }
 
 @import 'Header';
 @import 'Section1';
+@import 'Section2';

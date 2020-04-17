@@ -7,7 +7,16 @@
   {
     "title": "About",
     "href": "/loan-company/about",
-    "sub_menu": []
+    "sub_menu": [
+      {
+        "title": "About You",
+        "href": "/loan-company/about-you"
+      },
+      {
+        "title": "About Me",
+        "href": "/loan-company/about-me"
+      }
+    ]
   },
   {
     "title": "Services",
