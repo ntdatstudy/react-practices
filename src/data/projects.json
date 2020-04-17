@@ -14,13 +14,5 @@
     "bg_color": "#3589F1",
     "text_color": "#000019",
     "href": "/loan-company"
-  },
-  {
-    "id": 3,
-    "name": "AccordianComponent",
-    "title": "Accordian Component",
-    "bg_color": "#009999",
-    "text_color": "#333333",
-    "href": "/accordian-component"
   }
 ]

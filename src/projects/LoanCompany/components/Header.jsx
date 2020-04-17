@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from './Logo';
 import Nav from './Nav';
-import Contact from './Contact';
+import LoanCompanyLink from './LoanCompanyLink';
 import NavToggler from './NavToggler';
 
 import useNavResponsive from '../hooks/useNavResponsive';
@@ -14,7 +14,9 @@ function Header() {
     <header className="loancompany-header">
       <Logo />
       <Nav />
-      {navResponsive ? <NavToggler /> : <Contact />}
+      {navResponsive ? <NavToggler /> : (
+        <LoanCompanyLink text="+880.762.009.00" />
+      )}
     </header>
   );
 }

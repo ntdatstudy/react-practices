@@ -1,19 +1,23 @@
 
 import React from 'react';
+import AppProvider from './contexts/AppContext';
+
 import Header from './components/Header';
+import Section1 from './components/Section1';
+import Section2 from './components/Section2';
 
 import './assets/scss/App.scss';
 
-import AppProvider from './contexts/AppContext';
 
 function LoanCompany() {
   return (
     <AppProvider>
       <div className="loancompany-container">
         <Header />
-        {/* <main>
-          <h1>Loan Company</h1>
-        </main> */}
+        <main>
+          <Section1 />
+          <Section2 />
+        </main>
       </div>
     </AppProvider>
   );

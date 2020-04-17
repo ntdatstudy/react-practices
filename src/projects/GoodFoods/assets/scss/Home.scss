@@ -1,141 +1,161 @@
-.goodfoods-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    &.active {
-        .banner-text,
+.goodfoods-container {
+    .goodfoods-banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        &.active {
+            .banner-text,
+            .banner-img {
+                display: initial;
+            }
+        }
+        .banner-text {
+            max-width: 500px;
+            margin-right: 50px;
+            text-align: justify;
+            display: none;
+            h2 {
+                font-size: 54px;
+                text-transform: uppercase;
+                font-weight: 800;
+                color: $defaultColor;
+                line-height: 1.2em;
+            }
+            p {
+                font-size: 18px;
+                color: $defaultColor;
+                line-height: 1.8em;
+                margin: 20px 0;
+            }
+            a {
+                position: relative;
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: $defaultColor;
+                letter-spacing: 1px;
+                font-size: 18px;
+                text-decoration: none;
+                padding: 15px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 60px;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: $primaryColor;
+                    z-index: -1;
+                    transition: 0.5s ease-in-out;
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
         .banner-img {
-            display: initial;
-        }
-    }
-    .banner-text {
-        max-width: 500px;
-        margin-right: 50px;
-        text-align: justify;
-        display: none;
-        h2 {
-            font-size: 54px;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: $defaultColor;
-            line-height: 1.2em;
-        }
-        p {
-            font-size: 18px;
-            color: $defaultColor;
-            line-height: 1.8em;
-            margin: 20px 0;
-        }
-        a {
+            $bannerImgSize: 440px;
+    
             position: relative;
-            display: inline-block;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: $defaultColor;
-            letter-spacing: 1px;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 15px;
-            &::before {
+            width: $bannerImgSize;
+            height: $bannerImgSize;
+            background: #000;
+            display: none;
+            img {
                 position: absolute;
-                content: '';
-                width: 60px;
+                width: 100%;
                 height: 100%;
                 top: 0;
                 left: 0;
-                background: $primaryColor;
-                z-index: -1;
-                transition: 0.5s ease-in-out;
-            }
-            &:hover {
-                &::before {
-                    width: 100%;
-                }
+                object-fit: cover;
             }
         }
     }
-    .banner-img {
-        $bannerImgSize: 440px;
-
-        position: relative;
-        width: $bannerImgSize;
-        height: $bannerImgSize;
-        background: #000;
-        display: none;
-        img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-        }
-    }
-}
-
-.icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-    .media,
-    .controls {
+    
+    .icons {
         display: flex;
-        li {
-            list-style: none;
-        }
-    }
-    .media {
-        li {
-            margin-right: 30px;
-            img {
-                display: inline-block;
-                max-height: 24px;
-                transition: 0.5s ease-in-out;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+        .media,
+        .controls {
+            display: flex;
+            li {
+                list-style: none;
             }
-            &:hover {
+        }
+        .media {
+            li {
+                margin-right: 30px;
                 img {
-                    transform: translateY(-10px);
+                    display: inline-block;
+                    max-height: 24px;
+                    transition: 0.5s ease-in-out;
+                }
+                &:hover {
+                    img {
+                        transform: translateY(-10px);
+                    }
                 }
             }
         }
-    }
-    .controls {
-        li {
-            margin-left: 20px;
-            cursor: pointer;
-            filter: invert(1);
-            transition: 0.5s ease-in-out;
-            &:hover {
-                opacity: 0.5;
+        .controls {
+            li {
+                margin-left: 20px;
+                cursor: pointer;
+                filter: invert(1);
+                transition: 0.5s ease-in-out;
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }
     }
 }
 
 @media (max-width: 992px) {
-    .goodfoods-banner {
-        margin-top: 0;
-        flex-direction: column-reverse;
-        .banner-text {
-            max-width: 100%;
-            margin-right: 0;
-            h2 {
-                font-size: 30px;
+    .goodfoods-container {
+        .goodfoods-banner {
+            margin-top: 0;
+            flex-direction: column-reverse;
+            .banner-text {
+                max-width: 100%;
+                margin-right: 0;
+                h2 {
+                    font-size: 30px;
+                }
+            }
+            .banner-img {
+                width: 100%;
+                height: 40vh;
+                margin: 20px 0;
             }
         }
-        .banner-img {
-            width: 100%;
-            height: 40vh;
-            margin: 20px 0;
+    
+        .icons {
+            .controls {
+                li {
+                    filter: invert(0);
+                }
+            }
         }
     }
+}
 
-    .icons {
-        .controls {
-            li {
-                filter: invert(0);
+@media (max-width: 576px) {
+    .goodfoods-container {
+        .icons {
+            .controls {
+                li {
+                    img {
+                        $controlSize: 40px;
+                        width: $controlSize;
+                        height: $controlSize;
+                    }
+                }
             }
         }
     }

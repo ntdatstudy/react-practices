@@ -1,0 +1,201 @@
+.loancompany-container {
+    .section1 {
+        background-image: url('../images/bg1.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding-top: 120px;
+        .main-slider {
+            position: relative;
+            .promotion-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 0;
+                overflow: hidden;
+                &.active {
+                    height: auto;
+                    .promotion-info {
+                        h3, h1, .loancompany-link {
+                            transform: translateX(0);
+                        }
+                    }
+                    .promotion-img {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .promotion-info {
+                    width: 48%;
+                    padding-left: 3%;
+                    overflow: hidden;
+                    h3, h1, .loancompany-link {
+                        transform: translateX(-1000px);
+                        transition: transform 0.5s;
+                    }
+                    h3 {
+                        font-size: 18px;
+                        color: $primaryColor;
+                        font-weight: 500;
+                        margin: 0 0 30px;
+                        
+                    }
+                    h1 {
+                        font-family: 'Rufina', serif;
+                        font-size: 56px;
+                        color: #000A2D;
+                        margin: 0 0 50px;
+                        transition-delay: 0.5s;
+                    }
+                    .loancompany-link {
+                        background: #0b1416;
+                        transition-delay: 1s;
+                    }
+                }
+                .promotion-img {
+                    width: 48%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        vertical-align: middle;
+                        opacity: 0;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            .main-slider-controller {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                .controller {
+                    $controllerSize: 60px;
+                    width: $controllerSize;
+                    height: $controllerSize;
+                    background: #FFF;
+                    border: none;
+                    cursor: pointer;
+                    &:focus {
+                        outline: none;
+                    }
+                    &:hover {
+                        img {
+                            opacity: 0.3;
+                        }
+                    }
+                    img {
+                        $iconSize: 20px;
+                        width: $iconSize;
+                        height: $iconSize;
+                    }
+                    &.prev {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .main-slider-footer {
+            display: flex;
+            width: 97%;
+            justify-content: flex-end;
+            margin-left: 3%;
+            .caption-container {
+                display: flex;
+                width: 33.33%;
+                align-items: center;
+                background: $primaryColor;
+                padding: 0 10px;
+                &:first-child {
+                    padding: 0;
+                }
+                .caption-image {
+                    img {
+                        width: 100%;
+                        vertical-align: middle;
+                    }
+                }
+                .caption-icon {
+                    img {
+                        $iconSize: 55px;
+                        width: $iconSize;
+                        height: $iconSize;
+                    }
+                }
+                .caption {
+                    p {
+                        font-size: 18px;
+                        color: #FFF;
+                        text-transform: uppercase;
+                        margin-bottom: 0;
+                        line-height: 1.7;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .loancompany-container {
+        .section1 {
+            .main-slider {
+                .promotion-container {
+                    .promotion-info {
+                        h1 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+                .main-slider-controller {
+                    .controller {
+                        $controllerSize: 40px;
+                        width: $controllerSize;
+                        height: $controllerSize;
+                    }
+                }
+            }
+            .main-slider-footer {
+                .caption-container {
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                    .caption {
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .loancompany-container {
+        .section1 {
+            .main-slider {
+                .promotion-container {
+                    .promotion-info {
+                        width: 70%;
+                        padding-bottom: 40px;
+                        h1 {
+                            font-size: 33px;
+                        }
+                    }
+                    .promotion-img {
+                        display: none;
+                    }
+                }
+            }
+            .main-slider-footer {
+                .caption-container {
+                    width: 50%;
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
