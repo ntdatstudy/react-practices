@@ -9,9 +9,9 @@ function Caption(props) {
   const { caption } = props;
 
   return (
-    <div class="caption-container">
-      <div class="caption-icon">
-        <img src={require(`../assets/images/${caption.icon}`)} alt="" />
+    <div className="caption-container">
+      <div className="caption-icon">
+        <img src={require(`../assets/images/svg/${caption.icon}`)} alt="" />
       </div>
       <div className="caption">
         <p>{caption.title1}</p>

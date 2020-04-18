@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Business Loan",
+    "content": "Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore",
+    "icon": "work.svg"
+  },
+  {
+    "title": "Commercial Loans",
+    "content": "Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore",
+    "icon": "loan.svg"
+  },
+  {
+    "title": "Construction Loans",
+    "content": "Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore",
+    "icon": "loan2.svg"
+  },
+  {
+    "title": "Business Loan",
+    "content": "Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore",
+    "icon": "thumbs-up2.svg"
+  }
+]

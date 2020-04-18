@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Favicon from 'react-favicon';
 
+import favicon from '../assets/images/favicon.png';
 import projects from '../data/projects.json';
 
 function Projects() {
   return (
     <div>
+      <Favicon url={favicon} />
       {projects.map(project => (
         <Link
           key={project.id}

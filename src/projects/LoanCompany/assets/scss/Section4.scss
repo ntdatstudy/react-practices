@@ -1,0 +1,55 @@
+.loancompany-container {
+    .section4 {
+        padding: 200px 0 150px;
+        .section4-1 {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 100%;
+                background: $primaryColor;
+                top: 0;
+                right: 0;
+                z-index: 0;
+            }
+            &::after {
+                position: absolute;
+                content: attr(data-text);
+                bottom: 95px;
+                right: -96px;
+                font-size: 30px;
+                font-weight: 700;
+                color: $textPrimaryColor;
+                padding: 19px 55px;
+                background: rgba(255, 255, 255, 0.8);
+                transform: rotate(-90deg);
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .section4-2 {
+            padding-left: 50px;
+            .info {
+                .primary-title {
+                    margin-bottom: 22px;
+                }
+                .secondary-title {
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: 16px;
+                    color: #7A8290;
+                    margin-bottom: 46px;
+                    padding-right: 30px;
+                }
+            }
+            .benefits {
+                .loancompany-checkbox {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+}
