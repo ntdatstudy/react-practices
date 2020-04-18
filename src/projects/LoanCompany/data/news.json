@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "The advent of pesticides brought in its benefits and pitfalls.",
+    "cover": "blog1.png",
+    "author": "Steve",
+    "createdAt": "2020-01-28",
+    "postedAt": "2020-10-06"
+  },
+  {
+    "id": 2,
+    "title": "The advent of pesticides brought in its benefits and pitfalls.",
+    "cover": "blog2.png",
+    "author": "Steve",
+    "createdAt": "2020-01-28",
+    "postedAt": "2020-10-06"
+  }
+]

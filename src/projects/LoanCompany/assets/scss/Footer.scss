@@ -1,0 +1,87 @@
+.loancompany-container {
+    footer {
+        $footerFontColor: #8BA4B1;
+        padding: 170px 0 50px;
+        background-image: url('../images/footer_bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .info {
+            img {
+                margin-bottom: 40px;
+            }
+            p {
+                font-size: 16px;
+                color: $footerFontColor;
+            }
+        }
+        .link {
+            .title {
+                color: #FFF;
+                font-size: 20px;
+                margin-bottom: 29px;
+            }
+            ul {
+                margin-bottom: 0;
+                li {
+                    list-style: none;
+                    margin-bottom: 15px;
+                    a {
+                        font-size: 16px;
+                        color: $footerFontColor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .copy-right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            p {
+                color: $footerFontColor;
+                font-size: 16px;
+                font-weight: 300;
+                i, span {
+                    color: $primaryColor;
+                }
+            }
+            .media {
+                a {
+                    display: inline-block;
+                    color: $footerFontColor;
+                    margin: 0 10px;
+                    transition: 0.5s;
+                    &:hover {
+                        color: #FFF;
+                    }
+                    i {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .loancompany-container {
+        footer {
+            .copy-right {
+                flex-direction: column;
+                align-items: unset;
+                .media {
+                    a {
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

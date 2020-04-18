@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import LoanCompanyLink from './LoanCompanyLink';
 import { AppContext } from '../contexts/AppContext';
 
-import { capitalize } from '../../../assets/common';
+import { capitalize } from '../../../assets/js/common';
 
 Promotion.propTypes = {
   promotion: PropTypes.object.isRequired
