@@ -1,0 +1,44 @@
+.loancompany-container {
+    .section8 {
+        padding: 195px 0 160px;
+        .title-container {
+            text-align: center;
+        }
+        .blog-container {
+            .cover {
+                border-radius: 6px;
+                img {
+                    width: 100%;
+                }
+            }
+            .caption {
+                padding: 25px 120px 0 20px;
+                .created-at {
+                    font-size: 16px;
+                    color: $primaryColor;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    margin-bottom: 27px;
+                }
+                .title {
+                    display: block;
+                    font-size: 25px;
+                    color: #282828;
+                    font-weight: 500;
+                    text-decoration: none;
+                    margin-bottom: 17px;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+                .posted-at {
+                    font-size: 16px;
+                    color: #57667E;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

@@ -82,3 +82,22 @@
         }
     }
 }
+
+@media (max-width: 992px) {
+    .loancompany-container {
+        .section6 {
+            .member-info {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .loancompany-container {
+        .section6 {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+    }
+}

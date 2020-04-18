@@ -183,6 +183,7 @@ $textSecondaryColor: #64676C;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    animation: btnScrollToTop 1s;
     &:focus {
         outline: none;
     }
@@ -193,6 +194,15 @@ $textSecondaryColor: #64676C;
     }
 }
 
+@keyframes btnScrollToTop {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @import 'Header';
 @import 'Section1';
 @import 'Section2';
@@ -200,3 +210,6 @@ $textSecondaryColor: #64676C;
 @import 'Section4';
 @import 'Section5';
 @import 'Section6';
+@import 'Section7';
+@import 'Section8';
+@import 'Footer';

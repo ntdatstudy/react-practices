@@ -3,24 +3,32 @@
     "id": 1,
     "name": "Bruce Roberts",
     "title": "Volunteer leader",
-    "image": "home_blog1.png"
+    "image": "home_blog1.png",
+    "position": "Co Founder",
+    "testimonial": "Logisti Group is a representative logistics operator providing full range of service of customs clearance and transportation world."
   },
   {
     "id": 2,
     "name": "Bruce Roberts",
     "title": "Volunteer leader",
-    "image": "home_blog2.png"
+    "image": "home_blog2.png",
+    "position": "Co Founder",
+    "testimonial": "Logisti Group is a representative logistics operator providing full range of service of customs clearance and transportation world."
   },
   {
     "id": 3,
     "name": "Bruce Roberts",
     "title": "Volunteer leader",
-    "image": "home_blog3.png"
+    "image": "home_blog3.png",
+    "position": "Co Founder",
+    "testimonial": "Logisti Group is a representative logistics operator providing full range of service of customs clearance and transportation world."
   },
   {
     "id": 4,
     "name": "Bruce Roberts",
     "title": "Volunteer leader",
-    "image": "home_blog4.png"
+    "image": "home_blog4.png",
+    "position": "Co Founder",
+    "testimonial": "Logisti Group is a representative logistics operator providing full range of service of customs clearance and transportation world."
   }
 ]

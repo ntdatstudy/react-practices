@@ -1,5 +1,102 @@
 .loancompany-container {
     .section7 {
-        
+        .member-testimonial {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #021A47;
+            padding: 150px 0;
+            cursor: pointer;
+            .testimonial-img {
+                width: 65px;
+                margin-bottom: 50px;
+            }
+            .testimonial {
+                font-size: 30px;
+                color: #FFF;
+                margin-bottom: 50px;
+            }
+            .member-info {
+                display: flex;
+                align-items: center;
+                .image {
+                    $imageSize: 82px;
+                    width: $imageSize;
+                    height: $imageSize;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .info {
+                    margin-left: 20px;
+                    h3 {
+                        font-size: 16px;
+                        color: #FFF;
+                        font-weight: normal;
+                        margin-bottom: 0;
+                    }
+                    h6 {
+                        font-size: 16px;
+                        color: #FFF;
+                        font-weight: 500;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+        .carousel-root {
+            .carousel {
+                .slider-wrapper {
+                    .slider {
+                        .slide {
+                            background: #021A47;
+                        }
+                    }
+                }
+            }
+        }
+        .thumbs-wrapper {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .loancompany-container {
+        .section7 {
+            .member-testimonial {
+                .testimonial {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .loancompany-container {
+        .section7 {
+            .member-testimonial {
+                padding: 60px 0;
+                .testimonial-img {
+                    margin-bottom: 30px;
+                }
+                .testimonial {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .loancompany-container {
+        .section7 {
+            .member-testimonial {
+                padding: 40px 0;
+            }
+        }
     }
 }

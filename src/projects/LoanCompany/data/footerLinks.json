@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Quick Link",
+    "subLinks": [
+      { "title": "About" },
+      { "title": "Offers & Discounts" },
+      { "title": "Get Coupon" },
+      { "title": "Contact Us" }
+    ]
+  },
+  {
+    "title": "New Products",
+    "subLinks": [
+      { "title": "Woman Cloth" },
+      { "title": "Fashion Accessories" },
+      { "title": "Man Accessories" },
+      { "title": "Rubber made Toys" }
+    ]
+  },
+  {
+    "title": "Support",
+    "subLinks": [
+      { "title": "Frequently Asked Questions" },
+      { "title": "Terms & Conditions" },
+      { "title": "Privacy Policy" },
+      { "title": "Report a Payment Issue" }
+    ]
+  }
+]
