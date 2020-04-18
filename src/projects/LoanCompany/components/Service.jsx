@@ -11,7 +11,7 @@ function Service(props) {
   return (
     <div className="service">
       <div className="service-icon">
-        <img src={require(`../assets/images/${service.icon}`)} />
+        <img src={require(`../assets/images/svg/${service.icon}`)} alt="" />
       </div>
       <div className="service-info">
         <h3>{service.title}</h3>

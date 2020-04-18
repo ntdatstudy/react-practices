@@ -53,35 +53,37 @@ function NavItem(props) {
   return (
     <li className={className}>
       <Link className="nav-link" to={nav.href}>{nav.title}</Link>
-      <div
-        className="subnav-container"
-        ref={subNavContent}
-        style={subNavStyle}
-      >
-        {hasSubMenu && (
-          <ul
-            className="subnav"
-            onMouseEnter={onHoverSubMenu}
-            onMouseLeave={onLeaveHoverSubMenu}
-          >
-            {nav.sub_menu.map(subnav => (
-              <li className="subnav-item" key={subnav.href}>
-                <Link className="subnav-link" to={subnav.href}>
-                  {subnav.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-        {(navResponsive && hasSubMenu) && (
-          <button
-            className="submenu-toggler"
-            onClick={onToggleSubMenu}
-          >
-            {expanded ? '-' : '+'}
-          </button>
-        )}
-      </div>
+      {nav.sub_menu.length > 0 && (
+        <div
+          className="subnav-container"
+          ref={subNavContent}
+          style={subNavStyle}
+        >
+          {hasSubMenu && (
+            <ul
+              className="subnav"
+              onMouseEnter={onHoverSubMenu}
+              onMouseLeave={onLeaveHoverSubMenu}
+            >
+              {nav.sub_menu.map(subnav => (
+                <li className="subnav-item" key={subnav.href}>
+                  <Link className="subnav-link" to={subnav.href}>
+                    {subnav.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          {(navResponsive && hasSubMenu) && (
+            <button
+              className="submenu-toggler"
+              onClick={onToggleSubMenu}
+            >
+              {expanded ? '-' : '+'}
+            </button>
+          )}
+        </div>
+      )}
     </li>
   );
 }

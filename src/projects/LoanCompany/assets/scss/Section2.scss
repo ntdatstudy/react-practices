@@ -1,38 +1,26 @@
 .loancompany-container {
     .section2 {
         display: flex;
-        padding: 150px 100px 300px;
-        margin: 0 auto;
+        padding: 150px 0 300px;
         .left-container {
-            width: 50%;
-            padding: 0 15px;
-            h3 {
-                font-size: 16px;
-                font-weight: 500;
-                color: $primaryColor;
+            .primary-title {
                 margin-bottom: 22px;
             }
-            h1 {
-                font-family: 'Rufina', serif;
-                font-size: 40px;
-                font-weight: 700;
-                color: #000A2D;
+            .secondary-title {
                 margin-bottom: 35px;
             }
             p {
                 font-size: 16px;
-                color: #64676C;
+                color: $textSecondaryColor;
                 margin-bottom: 35px;
                 padding-right: 50px;
             }
             .loancompany-link {
-                background: #000A2D;
+                background: $textPrimaryColor;
             }
         }
         .right-container {
             position: relative;
-            width: 50%;
-            padding: 0 15px;
             img {
                 vertical-align: middle;
             }
@@ -53,58 +41,20 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .loancompany-container {
-        .section2 {
-            $paddingSpace: 30px;
-            padding-left: $paddingSpace;
-            padding-right: $paddingSpace;
-        }
-    }
-}
-
 @media (max-width: 992px) {
     .loancompany-container {
         .section2 {
-            $paddingSpace: 150px;
-            flex-direction: column;
-            padding-left: $paddingSpace;
-            padding-right: $paddingSpace;
-            padding-bottom: 100px;
             .left-container {
-                width: 100%;
-                padding-bottom: 50px;
+                margin-bottom: 50px;
             }
             .right-container {
-                width: 100%;
                 .image1 {
                     position: unset;
-                    max-width: 100%;
                 }
                 .image2 {
                     display: none;
                 }
             }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .loancompany-container {
-        .section2 {
-            $paddingSpace: 50px;
-            padding-left: $paddingSpace;
-            padding-right: $paddingSpace;
-        }
-    }
-}
-
-@media (max-width: 576px) {
-    .loancompany-container {
-        .section2 {
-            $paddingSpace: 20px;
-            padding-left: $paddingSpace;
-            padding-right: $paddingSpace;
         }
     }
 }

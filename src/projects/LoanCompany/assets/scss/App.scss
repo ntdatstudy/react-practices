@@ -3,6 +3,8 @@
 
 $primaryColor: #3589F1;
 $primaryHoverColor: #2171D3;
+$textPrimaryColor: #000A2D;
+$textSecondaryColor: #64676C;
 
 .loancompany-container {
     font-family: 'Rubik', sans-serif !important;
@@ -21,8 +23,8 @@ $primaryHoverColor: #2171D3;
     letter-spacing: 1px;
     text-transform: uppercase;
     &:hover {
+        text-decoration: none;
         &::before {
-            // transform: scaleX(1);
             width: 100%;
         }
         &::after {
@@ -41,12 +43,12 @@ $primaryHoverColor: #2171D3;
         transition: width 0.5s;
         transform-origin: left;
         transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-        // transform: scaleX(0);
         z-index: 1;
     }
     &::after {
         position: absolute;
         content: attr(data-text);
+        color: #FFF;
         left: 0;
         top: 0;
         padding: 19px 31px;
@@ -55,7 +57,146 @@ $primaryHoverColor: #2171D3;
     }
 }
 
+.primary-title {
+    font-size: 16px;
+    color: $primaryColor;
+    font-weight: 500;
+}
+
+.secondary-title {
+    font-family: 'Rufina', serif;
+    font-size: 40px;
+    color: $textPrimaryColor;
+    font-weight: 700;
+}
+
+.loancompany-checkbox {
+    position: relative;
+    color: #666666;
+    padding-left: 35px;
+    input {
+        appearance: none;
+        &:checked ~ span {
+            border: 2px solid transparent;
+            background: #014B85;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 11px;
+                top: 1px;
+                left: 4px;
+                border: solid #FFF;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    span {
+        $checkboxSize: 19px;
+        position: absolute;
+        width: $checkboxSize;
+        height: $checkboxSize;
+        top: calc(50%);
+        left: 0;
+        transform: translateY(-50%);
+        border: 2px solid #D0D0D0;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+}
+
+.loancompany-select {
+    width: 100%;
+    background: #FFF;
+    cursor: pointer;
+    select {
+        display: none;
+    }
+    .select {
+        position: relative;
+        padding: 18px;
+        &::before {
+            position: absolute;
+            content: '';
+            border-bottom: 2px solid #a9b6cd;
+            border-right: 2px solid #a9b6cd;
+            height: 10px;
+            width: 10px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            margin-top: -2px;
+            transition: 0.3s;
+        }
+        &.active {
+            &::before {
+                transform: rotate(225deg);
+            }
+        }
+        span {
+            font-size: 14px;
+            color: #616875;
+        }
+        ul {
+            position: absolute;
+            max-height: 0;
+            width: 100%;
+            left: 0;
+            top: calc(100% + 3px);
+            box-sizing: border-box;
+            background: #FFF;
+            margin: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            &.active {
+                box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+            }
+            li {
+                list-style: none;
+                font-size: 14px;
+                color: #616875;
+                padding: 10px 20px 4px;
+                min-height: 40px;
+                cursor: pointer;
+                &:hover {
+                    background: #F6F6F6;
+                }
+                &.selected {
+                    font-weight: bold;
+                    background: #F6F6F6;
+                }
+            }
+        }
+    }
+}
+
+.btn-scroll-to-top {
+    $btnSize: 50px;
+    position: fixed;
+    width: $btnSize;
+    height: $btnSize;
+    background: $primaryColor;
+    box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+    border-color: transparent;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    &:focus {
+        outline: none;
+    }
+    .scrolltop-icon {
+        $iconSize: 25px;
+        width: $iconSize;
+        height: $iconSize;
+    }
+}
+
 @import 'Header';
 @import 'Section1';
 @import 'Section2';
 @import 'Section3';
+@import 'Section4';
+@import 'Section5';
+@import 'Section6';

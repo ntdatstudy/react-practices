@@ -17,7 +17,17 @@
                     height: auto;
                     .promotion-info {
                         h3, h1, .loancompany-link {
-                            transform: translateX(0);
+                            animation-name: section1Animation;
+                            animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        }
+                        h3 {
+                            animation-duration: 0.5s;
+                        }
+                        h1 {
+                            animation-duration: 1s;
+                        }
+                        .loancompany-link {
+                            animation-duration: 1.5s;
                         }
                     }
                     .promotion-img {
@@ -30,27 +40,20 @@
                     width: 48%;
                     padding-left: 3%;
                     overflow: hidden;
-                    h3, h1, .loancompany-link {
-                        transform: translateX(-1000px);
-                        transition: transform 0.5s;
-                    }
                     h3 {
                         font-size: 18px;
                         color: $primaryColor;
                         font-weight: 500;
                         margin: 0 0 30px;
-                        
                     }
                     h1 {
                         font-family: 'Rufina', serif;
                         font-size: 56px;
-                        color: #000A2D;
+                        color: $textPrimaryColor;
                         margin: 0 0 50px;
-                        transition-delay: 0.5s;
                     }
                     .loancompany-link {
                         background: #0b1416;
-                        transition-delay: 1s;
                     }
                 }
                 .promotion-img {
@@ -133,6 +136,15 @@
                 }
             }
         }
+    }
+}
+
+@keyframes section1Animation {
+    0%  {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 

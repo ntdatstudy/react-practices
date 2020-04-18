@@ -6,6 +6,16 @@
     display: flex;
     padding: 0 95px;
     align-items: center;
+    animation: headerAnimation 1s;
+    transition: position 0.5s ease-out;
+    &.fixed {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: #FFF;
+        box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+        z-index: 1000;
+    }
     .logo {
         flex-grow: 1;
     }
@@ -41,7 +51,7 @@
                     color: $navTextColor;
                     font-size: 16px;
                     font-weight: 500;
-                    margin: 0 23px;
+                    margin: 0 20px;
                     padding: 42px 10px;
                     text-transform: capitalize;
                 }
@@ -90,8 +100,32 @@
     }
 }
 
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @media (min-width: 992px) {
     .loancompany-header {
+        &.fixed {
+            .nav-container {
+                .nav {
+                    .nav-item {
+                        .nav-link {
+                            padding-top: 28px;
+                            padding-bottom: 28px;
+                        }
+                        .subnav-container {
+                            top: 70px;
+                        }
+                    }
+                }
+            }
+        }
         .nav {
             .nav-item {
                 &:hover {

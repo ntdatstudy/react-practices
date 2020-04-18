@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Logo from './Logo';
 import Nav from './Nav';
@@ -9,9 +9,18 @@ import useNavResponsive from '../hooks/useNavResponsive';
 
 function Header() {
   const navResponsive = useNavResponsive();
+  const [fix, setFix] = useState(false);
+  const className = fix ? 'loancompany-header fixed' : 'loancompany-header';
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) setFix(true)
+      else setFix(false);
+    });
+  }, []);
 
   return (
-    <header className="loancompany-header">
+    <header className={className}>
       <Logo />
       <Nav />
       {navResponsive ? <NavToggler /> : (
