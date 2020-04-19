@@ -30,6 +30,11 @@
                         font-size: 16px;
                         color: $footerFontColor;
                         text-decoration: none;
+                        transition: 0.3s;
+                        &:hover {
+                            color: $primaryColor;
+                            padding-left: 5px;
+                        }
                     }
                 }
             }
