@@ -13,6 +13,7 @@ function Section7() {
         infiniteLoop={true}
         showArrows={false}
         showIndicators={false}
+        showThumbs={false}
         showStatus={false}
         emulateTouch={true}
         swipeScrollTolerance={1}

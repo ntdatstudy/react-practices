@@ -7,7 +7,7 @@
     padding: 0 95px;
     align-items: center;
     animation: headerAnimation 1s;
-    transition: position 0.5s ease-out;
+    transition: 0.5s ease-out;
     &.fixed {
         position: sticky;
         top: 0;
@@ -249,6 +249,11 @@
                             padding: 0 20px;
                             .subnav-item {
                                 margin-left: 0;
+                                &:hover {
+                                    .subnav-link {
+                                        color: $primaryColor !important;
+                                    }
+                                }
                                 .subnav-link {
                                     font-size: 14px !important;
                                     font-weight: 400 !important;

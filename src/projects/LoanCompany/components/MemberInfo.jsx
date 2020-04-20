@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import sr from '../../../assets/js/withScrollReveal';
 
 MemberInfo.propTypes = {
   member: PropTypes.object.isRequired
@@ -7,9 +8,21 @@ MemberInfo.propTypes = {
 
 function MemberInfo(props) {
   const { member } = props;
+  const section = useRef(null);
+  
+  const sectionConfig = {
+    origin: 'bottom',
+    duration: 2000,
+    delay: 500,
+    distance: '500px'
+  };
+  
+  useEffect(() => {
+    sr.reveal(section.current, sectionConfig);
+  }, []);
 
   return (
-    <div className="member-info">
+    <div className="member-info" ref={section}>
       <div className="image">
         <img src={require(`../assets/images/members/${member.image}`)} alt="" />
         <div className="media">

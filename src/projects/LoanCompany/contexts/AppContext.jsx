@@ -48,7 +48,6 @@ function AppProvider(props) {
   }
 
   function nextPromotion() {
-    console.log('ABC');
     dispatch({
       type: 'NEXT_PROMOTION',
       payload: {

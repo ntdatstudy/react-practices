@@ -5,10 +5,19 @@
             text-align: center;
         }
         .blog-container {
+            &:hover {
+                .cover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
             .cover {
                 border-radius: 6px;
+                overflow: hidden;
                 img {
                     width: 100%;
+                    transition: 0.3s;
                 }
             }
             .caption {

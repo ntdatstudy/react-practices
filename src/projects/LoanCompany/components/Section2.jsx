@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import LoanCompanyLink from './LoanCompanyLink';
+import sr from '../../../assets/js/withScrollReveal';
 
 import image1 from '../assets/images/about1.png';
 import image2 from '../assets/images/about2.png';
 
 function Section2() {
+  const img1 = useRef(null);
+  const img2 = useRef(null);
+  
+  const img1Config = {
+    origin: 'left',
+    duration: 2000,
+    distance: '500px'
+  };
+
+  const img2Config = {
+    ...img1Config,
+    origin: 'right'
+  }
+
+  useEffect(() => {
+    sr.reveal(img1.current, img1Config);
+    sr.reveal(img2.current, img2Config);
+  }, []);
+
   return (
     <div className="section2">
       <div className="container">
@@ -17,10 +37,10 @@ function Section2() {
             <LoanCompanyLink text="Apply For Loan" />
           </div>
           <div className="col-lg-6 right-container">
-            <div className="image1">
+            <div className="image1" ref={img1}>
               <img src={image1} alt="" />
             </div>
-            <div className="image2">
+            <div className="image2" ref={img2}>
               <img src={image2} alt="" />
             </div>
           </div>
