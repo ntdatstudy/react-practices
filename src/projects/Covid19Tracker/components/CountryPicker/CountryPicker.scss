@@ -1,0 +1,17 @@
+@import '../../assets/scss/main';
+
+.covid19tracker-container {
+    .countrypicker-container {
+        display: flex;
+        justify-content: center;
+        select {
+            width: 300px;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

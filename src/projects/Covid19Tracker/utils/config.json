@@ -1,0 +1,12 @@
+{
+  "color": {
+    "infected": "#BD2130",
+    "recovered": "#A4C939",
+    "deaths": "#BDBDBD"
+  },
+  "backgroundColor": {
+    "infected": "rgb(189, 33, 48, 0.5)",
+    "recovered": "rgb(164, 201, 57, 0.5)",
+    "deaths": "rgb(189, 189, 189, 0.5)"
+  }
+}

@@ -1,0 +1,39 @@
+.covid19tracker-container {
+    .logo {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px 0 0;
+        overflow: hidden;
+        img {
+            width: 100%;
+            vertical-align: middle;
+            animation: logoAnimation 1s ease-out;
+        }
+    }
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .covid19tracker-container {
+        .logo {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .covid19tracker-container {
+        .logo {
+            width: 170px;
+        }
+    }
+}

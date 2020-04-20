@@ -1,0 +1,15 @@
+@import '../../assets/scss/main';
+
+.covid19tracker-container {
+    .chart-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .covid19tracker-container {
+        .chart-container {
+            padding: 10px;
+        }
+    }
+}
