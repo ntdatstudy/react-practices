@@ -20,7 +20,7 @@ function Cards(props) {
       setDeathsPercent(`${deaths.value * 100 / confirmed.value}%`);
     }
   }, [props]);
-  console.log(recoveredPercent);
+
   return (
     <div className="cards-container">
       <div className="container">
